@@ -1,0 +1,17 @@
+FROM node:latest
+
+# Set working directory
+WORKDIR /app
+
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+COPY docker/db ./docker/db
+COPY .env ./
+COPY knexfile.js ./
+
+# Run migration and import script
+CMD ["node", "./docker/db/build.js"]
+

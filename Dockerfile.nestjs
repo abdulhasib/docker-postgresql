@@ -1,0 +1,11 @@
+# Use a base image
+FROM some_image:latest
+
+# Copy the script into the container
+COPY my_script.sh /app
+
+# Set working directory
+WORKDIR /app
+
+# Define the command to run the script
+CMD ["./my_script.sh"]

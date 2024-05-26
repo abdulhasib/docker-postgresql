@@ -1,0 +1,19 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "Description of my project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run"
+  },
+  "dependencies": {
+    "knex": "^0.21.18",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
